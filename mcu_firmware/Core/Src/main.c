@@ -104,13 +104,17 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-
+  HAL_TIM_PWM_Start_IT(&htim11, TIM_CHANNEL_1);
+  __HAL_TIM_SET_AUTORELOAD(&htim11, 65000);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
+    HAL_TIM_PWM_Start_IT(&htim11, TIM_CHANNEL_1);
+    HAL_Delay(500);
+    HAL_TIM_PWM_Stop_IT(&htim11, TIM_CHANNEL_1);
+    HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -189,7 +193,7 @@ static void MX_TIM11_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
+  sConfigOC.Pulse = 32767;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim11, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)

@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"mcu_firmware\startup_stm32f407xx.o"
+"mcu_firmware\main.o"
+"mcu_firmware\stm32f4xx_it.o"
+"mcu_firmware\stm32f4xx_hal_msp.o"
+"mcu_firmware\stm32f4xx_hal_tim.o"
+"mcu_firmware\stm32f4xx_hal_tim_ex.o"
+"mcu_firmware\stm32f4xx_hal_rcc.o"
+"mcu_firmware\stm32f4xx_hal_rcc_ex.o"
+"mcu_firmware\stm32f4xx_hal_flash.o"
+"mcu_firmware\stm32f4xx_hal_flash_ex.o"
+"mcu_firmware\stm32f4xx_hal_flash_ramfunc.o"
+"mcu_firmware\stm32f4xx_hal_gpio.o"
+"mcu_firmware\stm32f4xx_hal_dma_ex.o"
+"mcu_firmware\stm32f4xx_hal_dma.o"
+"mcu_firmware\stm32f4xx_hal_pwr.o"
+"mcu_firmware\stm32f4xx_hal_pwr_ex.o"
+"mcu_firmware\stm32f4xx_hal_cortex.o"
+"mcu_firmware\stm32f4xx_hal.o"
+"mcu_firmware\stm32f4xx_hal_exti.o"
+"mcu_firmware\stm32f4xx_hal_uart.o"
+"mcu_firmware\system_stm32f4xx.o"
+--strict --scatter "mcu_firmware\mcu_firmware.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "mcu_firmware.map" -o mcu_firmware\mcu_firmware.axf
