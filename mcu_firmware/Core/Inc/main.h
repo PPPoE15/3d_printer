@@ -31,7 +31,10 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#define X_axis_htim	  &htim11
+#define Y_axis_htim	  &htim12
+#define Z_axis_htim	  &htim13
+#define E_axis_htim	  &htim14
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

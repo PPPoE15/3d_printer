@@ -1,5 +1,4 @@
-mcu_firmware/stm32f4xx_hal_flash_ex.o: \
-  ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c \
+mcu_firmware/func.o: ..\Core\Src\func.c ..\Core\Inc\func.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
